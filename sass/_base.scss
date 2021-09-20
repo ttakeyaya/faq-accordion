@@ -1,0 +1,58 @@
+/** 
+-Import Google Fonts and Define font variables
+-Define color varibalbes
+-Reset CSS properties(margin, padding)
+-set 1rem to be 10px
+*/
+
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// Font variable
+$kumbh: "Kumbh Sans", sans-serif;
+
+// Colors
+:root {
+  --color-text-desaturated-blue: hsl(238, 29%, 16%);
+  --color-text-soft-red: hsl(14, 88%, 65%);
+  --color-text-dark-blue: hsl(237, 12%, 33%);
+  --color-text-gray-blue: hsl(240, 6%, 50%);
+
+  --color-divider-blue: hsl(240, 5%, 91%);
+
+  --color-bg-violet: hsl(273, 75%, 66%);
+  --color-bg-blue: hsl(240, 73%, 65%);
+}
+
+// Resetting
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $kumbh;
+  font-size: 1.2rem;
+  background-image: linear-gradient(
+    var(--color-bg-violet),
+    var(--color-bg-blue)
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  // center the FAQ card
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

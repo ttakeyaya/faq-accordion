@@ -1,0 +1,118 @@
+/** 
+-Import Google Fonts and Define font variables
+-Define color varibalbes
+-Reset CSS properties(margin, padding)
+-set 1rem to be 10px
+*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --color-text-desaturated-blue: hsl(238, 29%, 16%);
+  --color-text-soft-red: hsl(14, 88%, 65%);
+  --color-text-dark-blue: hsl(237, 12%, 33%);
+  --color-text-gray-blue: hsl(240, 6%, 50%);
+  --color-divider-blue: hsl(240, 5%, 91%);
+  --color-bg-violet: hsl(273, 75%, 66%);
+  --color-bg-blue: hsl(240, 73%, 65%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2rem;
+  background-image: linear-gradient(var(--color-bg-violet), var(--color-bg-blue));
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq {
+  background: white;
+  min-width: 920px;
+  height: 540px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-position: 1200% 68%;
+  background-repeat: no-repeat;
+}
+.faq::after {
+  content: url("../images/illustration-box-desktop.svg");
+  position: absolute;
+  top: 187px;
+  left: -95px;
+}
+.faq .faq-img-container {
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.faq .faq-img-container__image-woman {
+  position: absolute;
+  top: 9%;
+  left: -15%;
+}
+.faq .accordion {
+  margin-top: 30px;
+  flex-basis: 40%;
+}
+.faq .accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.faq .accordion__maintitle {
+  font-size: 32px;
+}
+.faq .accordion__btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px 40px 15px 0px;
+  margin-top: 10px;
+  background-color: white;
+  border-bottom: 1px solid var(--color-text-gray-blue);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  text-align: left;
+  cursor: pointer;
+}
+.faq .accordion__btn::after {
+  content: url("../images/icon-arrow-down.svg");
+  position: absolute;
+  top: 40%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+.faq .accordion__btn:hover {
+  color: var(--color-text-soft-red);
+}
+.faq .accordion__btn:focus {
+  font-weight: 700;
+}
+.faq .accordion__btn:focus::after {
+  transform: rotate(180deg);
+  top: 35%;
+}
+
+/*# sourceMappingURL=main.css.map */

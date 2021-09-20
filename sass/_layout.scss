@@ -1,0 +1,74 @@
+.faq {
+  background: white;
+  min-width: 920px;
+  height: 540px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-position: 1200% 68%;
+  background-repeat: no-repeat;
+  &::after {
+    content: url("../images/illustration-box-desktop.svg");
+    position: absolute;
+    top: 187px;
+    left: -95px;
+  }
+  .faq-img-container {
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden;
+    &__image-woman {
+      position: absolute;
+      top: 9%;
+      left: -15%;
+    }
+  }
+
+  .accordion {
+    margin-top: 30px;
+    flex-basis: 40%;
+    &__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease-in-out;
+    }
+    &__maintitle {
+      font-size: 32px;
+    }
+    &__btn {
+      position: relative;
+      display: block;
+      width: 100%;
+      font-size: 1.5rem;
+      padding: 10px 40px 15px 0px;
+      margin-top: 10px;
+      background-color: white;
+      border-bottom: 1px solid var(--color-text-gray-blue);
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      text-align: left;
+      cursor: pointer;
+
+      &::after {
+        content: url("../images/icon-arrow-down.svg");
+        position: absolute;
+        top: 40%;
+        right: 15px;
+        transform: translateY(-50%);
+      }
+
+      &:hover {
+        color: var(--color-text-soft-red);
+      }
+      &:focus {
+        font-weight: 700;
+        &::after {
+          transform: rotate(180deg);
+          top: 35%;
+        }
+      }
+    }
+  }
+}
