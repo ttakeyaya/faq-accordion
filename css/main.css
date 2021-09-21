@@ -133,7 +133,6 @@ body {
 .faq .accordion {
   background-color: white;
   padding: 2rem 2rem 5rem 2rem;
-  border: 2px solid red;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }

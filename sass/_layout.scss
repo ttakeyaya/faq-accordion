@@ -26,7 +26,6 @@
     background-color: white;
     position: relative;
     background-image: url("../images/bg-pattern-desktop.svg");
-    // background-position: 1200% 65%;
     background-size: 900px;
     background-position: 120% 75%;
     background-repeat: no-repeat;
@@ -75,7 +74,6 @@
   .accordion {
     background-color: white;
     padding: 2rem 2rem 5rem 2rem;
-    border: 2px solid red;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     @media screen and (max-width: 950px) {
