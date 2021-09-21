@@ -1,40 +1,101 @@
 .faq {
-  background: white;
-  min-width: 920px;
-  height: 540px;
-  border-radius: 20px;
   display: flex;
+  flex-direction: row;
+  max-width: 920px;
+  height: 530px;
   position: relative;
-  background-image: url("../images/bg-pattern-desktop.svg");
-  background-position: 1200% 68%;
-  background-repeat: no-repeat;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    margin: 4vw;
+    min-width: 292px;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-position: 45% 0%;
+  }
   &::after {
     content: url("../images/illustration-box-desktop.svg");
     position: absolute;
-    top: 187px;
-    left: -95px;
+    top: 40%;
+    left: -10%;
+    @media screen and (max-width: 950px) {
+      display: none;
+    }
   }
   .faq-img-container {
     flex-basis: 50%;
+    display: flex;
+    background-color: white;
     position: relative;
-    overflow: hidden;
-    &__image-woman {
-      position: absolute;
-      top: 9%;
-      left: -15%;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    // background-position: 1200% 65%;
+    background-size: 900px;
+    background-position: 120% 75%;
+    background-repeat: no-repeat;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    @media screen and (max-width: 950px) {
+      background-image: none;
+      justify-content: center;
+      border-bottom-left-radius: 0px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    &__img-desktop {
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
+    }
+    &__img-mobile {
+      display: none;
+      @media screen and (max-width: 950px) {
+        display: block;
+      }
+    }
+    .images {
+      overflow: hidden;
+      @media screen and (max-width: 950px) {
+        position: absolute;
+        top: -100%;
+        max-width: 100%;
+      }
+      &__woman-desktop {
+        transform: translate(-17%, 20%);
+        @media screen and (max-width: 950px) {
+          display: none;
+        }
+      }
+      &__woman-mobile {
+        display: none;
+        @media screen and (max-width: 950px) {
+          display: block;
+        }
+      }
     }
   }
-
   .accordion {
-    margin-top: 30px;
-    flex-basis: 40%;
+    background-color: white;
+    padding: 2rem 2rem 5rem 2rem;
+    border: 2px solid red;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    @media screen and (max-width: 950px) {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    &__maintitle {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      font-size: 3.2rem;
+      @media screen and (max-width: 950px) {
+        text-align: center;
+      }
+    }
     &__body {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.25s ease-in-out;
-    }
-    &__maintitle {
-      font-size: 32px;
+      transition: max-height 0.15s ease-in-out;
     }
     &__btn {
       position: relative;
@@ -50,7 +111,6 @@
       border-left: none;
       text-align: left;
       cursor: pointer;
-
       &::after {
         content: url("../images/icon-arrow-down.svg");
         position: absolute;
@@ -58,7 +118,6 @@
         right: 15px;
         transform: translateY(-50%);
       }
-
       &:hover {
         color: var(--color-text-soft-red);
       }
